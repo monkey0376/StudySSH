@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 设置为开发模式 -->
+	<constant name="struts.devMode" value="true"></constant>
+	<!-- 设置访问的扩展名 -->
+	<constant name="struts.action.extension" value="do"></constant>
+	<!-- 简单样式 -->
+	<constant name="struts.ui.theme" value="simple"></constant>
+	
+    <package name="h" namespace="/" extends="struts-default">
+		<action name="helloAction_*" class="com.zhongheng.action.HelloAction" method="{1}">
+			<result name="success" >/index.jsp</result>
+		</action>
+    </package>
+
+	<package name="u" namespace="/" extends="h">
+		<action name="userAction_*" class="com.zhongheng.action.UserAction" method="{1}">
+			<result name="success">/index.jsp</result>
+		</action>
+	</package>
+</struts>
