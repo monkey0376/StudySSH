@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+<!-- 映射文件的配置 -->
+<hibernate-mapping>
+	<!-- name就是实体类的全路径 -->
+	<class name="com.zz.domain.Product" table="product">
+		<!-- 主键 ...column是列名-->
+		<id name="pid" column="pid">
+			<generator class="native"/>
+		</id>
+		<property name="pname" column="pname" length="20" />
+		<property name="price" column="price" />
+	</class>
+</hibernate-mapping>
