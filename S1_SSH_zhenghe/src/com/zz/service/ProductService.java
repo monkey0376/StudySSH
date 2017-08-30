@@ -1,11 +1,14 @@
 package com.zz.service;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import com.zz.dao.ProductDao;
 import com.zz.domain.Product;
 
 /*
  * 商品管理类的业务层类
  */
+@Transactional
 public class ProductService {
 
 	private ProductDao productDao;
